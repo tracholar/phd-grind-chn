@@ -33,7 +33,7 @@
 \title{\Huge \textbf{ 博士磨砺 } \\ \large \textbf{一个博士研究生的回忆录} \footnote{英文原文链接:\url{http://www.pgbovine.net/PhD-memoir/pguo-PhD-grind.pdf}}}
 % Author
 \author{{ \begin{tabular}{lll}
-原著 & Philip Guo & (\texttt{philip@pgbovine.net})\\
+原著 & Philip J. Guo & (\texttt{philip@pgbovine.net})\\
 翻译 & 齐鹏 & (\texttt{pengqi@cs.stanford.edu})
 \end{tabular} }}
 \date{}
@@ -63,6 +63,26 @@
 \renewcommand{\emph}[1]{{\CJKfamily{gkai}#1}}
 
 \newcommand{\breakline}[0]{\begin{center}$\sim$\end{center}}
+
+%%% Disclaimer
+\markboth{}{}
+\section*{Disclaimer}
+
+This is an unauthorized Chinese translation of Philip J. Guo's memoir \emph{The Ph.D. Grind}, and the original author did not have any input on the translation.
+
+The copyright of the content belongs to the original author, and the translation to the translator. This work may not be used for business purposes, and may only be used as non-commercial material.
+
+Apart from the Translator's Preface, none of the content of this work represents, none should be interpreted as, the opinion of the translator.
+
+\section*{声明}
+
+本作品是Philip J. Guo的回忆录《The Ph.D. Grind》的中文翻译，翻译并没有得到原作者的任何授权，原作者也并没有以任何形式参与到翻译过程中。
+
+本作品内容的版权归原作者所有，翻译版本归译者所有。本作品不得被用于任何商业目的，只能作为非盈利性材料传播。
+
+除译序外，本作品的一切内容均不代表——且不应被认为是——译者的观点。
+
+\clearpage
 
 %%%% Preface
 
@@ -169,7 +189,15 @@ Dawson认为Klee可以在Linux驱动程序的成千上万行代码中，找到�
 
 \breakline
 
-我博士生涯的前四个月被我用于配置Klee以用它来分析上千行的Linux设备驱动程序，以期从中发现新的程序缺陷——这一过程并不顺利。尽管看起来我的任务并不复杂，但我很快就被淹没在了一些细节问题中，而这些细节对于让Klee能够分析Linux驱动程序又是必不可少的。我经常会花几个小时设置好Klee所需的复杂的实验环境，以分析某一个驱动程序的程序缺陷；但这种工作又往往以Klee因为其自身的程序缺陷而崩溃告终，让我的努力付诸东流。当我把这些Klee中存在的问题报告给Cristi时，他会竭尽全力解决，但由于Klee本身极其复杂、环节众多，在其中找到并解决程序缺陷绝非易事。我并不是想要专门指责Klee：任何以科研为目的开发的原型软件都会或多或少有一些难以预见的缺陷。我的任务是用Klee去Linux驱动程序代码中寻找缺陷，但讽刺的是，我整个第一个月的工作都变成了在Klee里找缺陷。
+我博士生涯的前四个月被我用于配置Klee以用它来分析上千行的Linux设备驱动程序，以期从中发现新的程序缺陷——这一过程并不顺利。尽管看起来我的任务并不复杂，但我很快就被淹没在了一些细节问题中，而这些细节对于让Klee能够分析Linux驱动程序又是必不可少的。我经常会花几个小时设置好Klee所需的复杂的实验环境，以分析某一个驱动程序的程序缺陷；但这种工作又往往以Klee因为其自身的程序缺陷而崩溃告终，让我的努力付诸东流。当我把这些Klee中存在的问题报告给Cristi时，他会竭尽全力解决，但由于Klee本身极其复杂、环节众多，在其中找到并解决程序缺陷绝非易事。我并不是想要专门指责Klee：任何以科研为目的开发的原型软件都会或多或少有一些难以预见的缺陷。我的任务是用Klee去Linux驱动程序代码中寻找缺陷，但讽刺的是，我整个第一个月的工作都变成了在Klee里找缺陷。（Klee不能在自己的代码里自动找到缺陷，这实在是太遗憾了！）随着时间的流逝，我对于手头的工作越来越感到沮丧，我觉得自己被分配的任务就是单纯的苦力，毫无知识含量——我的时间都用在让Klee能正常运行上了。
+
+这是我生命中第一次感受到被手头的工作所淹没的无望。以前，我的暑期实习都相对不难，而且就算一些学校的作业对我来说有些挑战，作业中也总有一个需要找到的正确答案等着我。如果我课上有没听懂的内容，助教或者高年级的学生总可以帮我答疑解惑。就算在本科进行学术研究的时候，我也总能请辅导我的博士学长帮忙，因为我当时处理的问题相对比较简单，而他通常知道问题的解决方法。对于本科的研究助理而言，对学术研究的投入以及期望也相对较低：科研只是我日常生活很小的一部分。如果我在某个科研问题上毫无头绪，我可以选择集中精力在课程作业上，或者干脆和朋友们出去玩。本科毕业也和学术研究毫无关联。然而，作为博士研究生，学术研究是我唯一的工作，除非我在学术研究上能有所成果，否则我将得不到博士学位。我难以把自己的情绪和每天的研究进展分离开来，而在那几个月中，我的研究进展出奇得缓慢。
+
+我现在步入了一个完全陌生的领域，所以我很难再向本科时候那样向别人寻求帮助，因为问题的答案往往是不确定的。因为我是唯一试图将Klee应用于驱动程序代码的人，我的同事们并不能为我提供任何指导。Dawson偶尔会给我一些较高层面的策略性的建议，但就像所有已经获得终身职位的教授一样，他的角色并不是和他的学生们一起“在战壕里（第一线）参与战斗”。在做出研究成果的过程中，弄清楚所有复杂的细节是我们学生的任务——对我来说，这些细节就是如何找到别人从未发现过的、Linux驱动程序中的软件缺陷。教授们都喜欢重复这句老生常谈：“如果有人曾经做过这样的工作的话，那就不能叫做学术研究啦！”这是我第一次亲身体会到了这句话的含义。
+
+尽管我每天都觉得工作很无望，但我仍然不断安慰自己：\emph{我只是刚刚开始在这里工作，我应该保持耐心。}我不想在我的导师或者同事面前显得软弱无能，尤其因为我当时是Dawson组里最年轻的学生。所以，我在超过100天的时间里，每天修复Klee不断产生的新问题，不断遇到新的、更加棘手的问题，在我的“寻找Linux驱动程序缺陷之旅”中，拖着沉重的脚步前进。
+
+当时，在我醒着的每时每刻，我不是在工作，就是在思考研究中的问题，抑或是在因为自己在研究中被艰深的技术问题所困扰而感到沮丧。与一般的朝九晚五的工作（比如我的暑期实习）所不同的是，以前每天晚上我可以把工作留在办公室，坐在电视前放松自己；而现在的学术研究在情绪上和心理上都是无休无止的。我晚上几乎没法让大脑停止思考问题，尽情放松休息——后来我发现几乎所有的博士研究生都有类似的困扰。有时，因为我的研究任务
 
 \end{CJK}
 \end{document}
